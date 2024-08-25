@@ -7,7 +7,13 @@ import './Home.css'; // Arquivo CSS para estilizar o slider
 // Importando as imagens locais
 import deliciasDeVerao from './img/peixes1.png';
 import pratosRapidos from './img/peixes2.png';
-import sobremesas from './img/peixes3.png';
+import sobremesas from './img/cordeiro.png';
+import saladas1 from './img/salada1.png';
+import saladas2 from './img/salada2.png';
+import saladas3 from './img/salada3.png';
+import sobremesa1 from './img/sobremesas1.png';
+import sobremesa2 from './img/sobremesas2.png';
+import sobremesa3 from './img/sobremesas3.png';
 
 // Configurações do slider
 const sliderSettings = {
@@ -30,35 +36,101 @@ const sliderSettings = {
 const Home = () => (
   <>
     <Hero />
-    <section className='slider-section'>
-      <h2 className='slider-title'>Pratos de Peixe Destaque</h2>
-      <Slider {...sliderSettings} className='slider'>
-        <div className='slider-item'>
-          <img
-            src={deliciasDeVerao}
-            alt='Delícias de Verão'
-            className='slider-image'
-          />
-          <div className='slider-caption'>Delícias de Verão</div>
-        </div>
-        <div className='slider-item'>
-          <img
-            src={pratosRapidos}
-            alt='Pratos Rápidos'
-            className='slider-image'
-          />
-          <div className='slider-caption'>Pratos Rápidos e Fáceis</div>
-        </div>
-        <div className='slider-item'>
-          <img
-            src={sobremesas}
-            alt='Sobremesas Irresistíveis'
-            className='slider-image'
-          />
-          <div className='slider-caption'>Sobremesas Irresistíveis</div>
-        </div>
-      </Slider>
-    </section>
+    <main className='main-content'>
+      <section className='slider-section'>
+        <h2 className='slider-title'>Destaque</h2>
+        <Slider {...sliderSettings} className='slider'>
+          {/* Imagens de Peixes */}
+          <div className='slider-item'>
+            <img
+              src={deliciasDeVerao}
+              alt='Delícias com Salmão'
+              className='slider-image'
+            />
+            <div className='slider-caption'>Delícias com Salmão</div>
+          </div>
+          <div className='slider-item'>
+            <img
+              src={pratosRapidos}
+              alt='Pratos Rápidos e Fáceis'
+              className='slider-image'
+            />
+            <div className='slider-caption'>Pratos Rápidos e Fáceis</div>
+          </div>
+          <div className='slider-item'>
+            <img
+              src={sobremesas}
+              alt='Cordeiro Grelhado'
+              className='slider-image'
+            />
+            <div className='slider-caption'>Cordeiro Grelhado</div>
+          </div>
+
+          {/* Imagens de Saladas */}
+          <div className='slider-item'>
+            <img
+              src={saladas1}
+              alt='Salada Colorida'
+              className='slider-image'
+            />
+            <div className='slider-caption'>Salada Colorida</div>
+          </div>
+          <div className='slider-item'>
+            <img src={saladas2} alt='Salada Fresca' className='slider-image' />
+            <div className='slider-caption'>Salada Fresca</div>
+          </div>
+          <div className='slider-item'>
+            <img
+              src={saladas3}
+              alt='Salada Nutritiva'
+              className='slider-image'
+            />
+            <div className='slider-caption'>Salada Nutritiva</div>
+          </div>
+
+          {/* Imagens de Sobremesas */}
+          <div className='slider-item'>
+            <img
+              src={sobremesa1}
+              alt='Waffles com Calda'
+              className='slider-image'
+            />
+            <div className='slider-caption'>Waffles com Calda</div>
+          </div>
+          <div className='slider-item'>
+            <img
+              src={sobremesa2}
+              alt='Sorvete de Banana Split'
+              className='slider-image'
+            />
+            <div className='slider-caption'>Sorvete de Banana Split</div>
+          </div>
+          <div className='slider-item'>
+            <img
+              src={sobremesa3}
+              alt='Panna Cotta com Calda de Frutas'
+              className='slider-image'
+            />
+            <div className='slider-caption'>
+              Panna Cotta com Calda de Frutas
+            </div>
+          </div>
+        </Slider>
+      </section>
+
+      {/* CTA Section */}
+      <section className='cta-section'>
+        <h2 className='cta-title'>Experimente Nossos Pratos Deliciosos!</h2>
+        <p className='cta-text'>
+          Não perca a chance de saborear nossas especialidades preparadas com os
+          melhores ingredientes. Visite nosso menu e descubra uma variedade de
+          opções para todos os gostos.
+        </p>
+        <a href='/menu' className='cta-button'>
+          Veja o Menu
+        </a>
+      </section>
+    </main>
     <Menu />
   </>
 );

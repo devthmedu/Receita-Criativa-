@@ -19,7 +19,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4); /* Sobreposição escura para contraste */
+  background: rgba(85, 85, 85, 0.27); /* Sobreposição escura para contraste */
   z-index: 1;
 }
 
@@ -32,11 +32,11 @@
 .hero-title {
   font-size: 2.5rem;
   margin-bottom: 20px;
-  font-weight: 700;
+  font-weight: 500;
  font-family: "Pacifico", cursive;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Aumenta a sombra para maior legibilidade */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.247); /* Aumenta a sombra para maior legibilidade */
   line-height: 1.3; /* Ajusta a altura da linha para melhor leitura */
-  color: black;
+  color: #f53e28;
 }
 
 .search-form {
