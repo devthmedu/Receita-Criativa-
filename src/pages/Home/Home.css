@@ -55,20 +55,20 @@
 
 /* Legenda do slider */
 .slider-caption {
-     position: relative;
-    margin-top: 20px;
-    color: #ffffff;
-    padding: 17px 140px;
-    border-radius: 50px;
-    font-size: 1.2rem;
-    font-weight: 500;
-    text-align: left;
-    background-color: #f53e28;
-    width: auto;
-    max-width: none;
-    margin: 0;
-    align-self: flex-start;
-    display: table;
+  position: relative; /* Permite ajustes posicionais se necessário */
+  margin-top: 20px; /* Espaço entre a imagem e a legenda */
+  color: #ffffff; /* Cor do texto da legenda */
+  padding: 10px 20px; /* Espaço interno para a legenda */
+  border-radius: 50px; /* Cantos arredondados para a legenda */
+  font-size: 1.2rem; /* Tamanho da fonte */
+  font-weight: 500; /* Peso da fonte */
+  text-align: left; /* Alinha o texto à esquerda */
+  background-color: #f53e28; /* Fundo da legenda */
+  width: auto; /* Ajusta a largura da legenda com base no conteúdo */
+  max-width: none; /* Remove a limitação de largura máxima */
+  margin: 0; /* Remove a margem automática */
+  align-self: flex-start; /* Alinha a legenda à esquerda do item do slider */
+  display: inline-block; /* Faz com que o fundo se ajuste ao tamanho do texto */
 }
 
 /* Estilo para a lista de pontos */

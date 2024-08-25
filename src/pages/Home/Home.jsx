@@ -117,19 +117,6 @@ const Home = () => (
           </div>
         </Slider>
       </section>
-
-      {/* CTA Section */}
-      <section className='cta-section'>
-        <h2 className='cta-title'>Experimente Nossos Pratos Deliciosos!</h2>
-        <p className='cta-text'>
-          Não perca a chance de saborear nossas especialidades preparadas com os
-          melhores ingredientes. Visite nosso menu e descubra uma variedade de
-          opções para todos os gostos.
-        </p>
-        <a href='/menu' className='cta-button'>
-          Veja o Menu
-        </a>
-      </section>
     </main>
     <Menu />
   </>
