@@ -1,0 +1,155 @@
+/* Estilo geral para a página de refeição */
+#single-meal {
+    min-height: 100vh; /* Garante altura mínima para preencher a tela */
+    padding: 20px; /* Espaçamento interno */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+    font-family: 'Open Sans', sans-serif; /* Fonte padrão */
+}
+
+.video-container {
+    width: 180%; /* Largura total do contêiner de vídeo */
+    max-width: 800px; /* Largura máxima para centralizar o vídeo */
+    margin-bottom: 20px; /* Espaçamento abaixo do vídeo */
+    border-radius: 12px; /* Bordas arredondadas para o vídeo */
+    overflow: hidden; /* Garante que nada ultrapasse os limites do contêiner */
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaçamento entre os itens */
+    max-width: 800px; /* Largura máxima para centralizar o conteúdo */
+    width: 100%;
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 20px; /* Espaçamento interno */
+}
+
+#single-meal h2 {
+    font-size: 2.5rem; /* Tamanho da fonte do título principal */
+    color: #8B4513; /* Cor verde escuro */
+    margin: 20px 0; /* Margens superior e inferior */
+    text-align: center; /* Centraliza o texto */
+    font-weight: 700; /* Peso da fonte mais forte */
+}
+
+#single-meal h3 {
+    font-size: 2rem; /* Tamanho da fonte do subtítulo */
+    color: #8B4513; /* Cor verde escuro */
+    margin: 20px 0; /* Margens superior e inferior */
+    text-align: center; /* Centraliza o texto */
+    font-weight: 700; /* Peso da fonte mais forte */
+}
+
+.ingredients ul {
+    list-style: none; /* Remove marcadores da lista */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Espaçamento entre os itens da lista */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margem */
+}
+
+.ingredients li {
+    background-color: #f53e28; /* Cor de fundo branca */
+    color: #ffffff; /* Cor do texto escura */
+    font-size: 1rem; /* Tamanho da fonte dos ingredientes */
+    padding: 12px 15px; /* Espaçamento interno */
+    border-radius: 50px; /* Bordas arredondadas */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */
+}
+
+.ingredients li:hover {
+    background-color: #f0f0f0; /* Cor de fundo clara no hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada no hover */
+}
+
+/* Estilo para o card MealBox */
+.meal-box {
+    position: relative; /* Necessário para posicionar o ícone sobre o card */
+    background-color: #ffffff; /* Cor de fundo branca */
+    border-radius: 12px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    overflow: hidden; /* Garante que nada ultrapasse os limites do card */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */
+    cursor: pointer; /* Cursor de ponteiro para indicar interatividade */
+    width: 100%; /* Garantir que o card use toda a largura disponível */
+    max-width: 320px; /* Limitar a largura máxima do card */
+    margin: 0 auto; /* Centraliza o card horizontalmente */
+}
+
+.meal-box img {
+    width: 100%; /* Imagem ocupa toda a largura do card */
+    height: 200px; /* Altura fixa para a imagem */
+    object-fit: cover; /* Cobre a área do card sem distorcer a imagem */
+    transition: opacity 0.3s ease; /* Transição suave para a opacidade */
+}
+
+.meal-title {
+    font-size: 1.2rem; /* Tamanho da fonte do título */
+    color: #333; /* Cor do texto escura */
+    margin: 15px; /* Espaçamento ao redor do texto */
+    text-align: center; /* Centraliza o texto */
+    font-weight: 600; /* Peso da fonte mais forte */
+    transition: color 0.3s ease; /* Transição suave para a cor */
+}
+
+/* Estilo do ícone de link */
+.meal-box a {
+    position: absolute;
+    bottom: 10px; /* Espaçamento da parte inferior do card */
+    right: 10px; /* Espaçamento da parte direita do card */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f17e36; /* Cor de fundo laranja para o ícone */
+    color: white; /* Cor do ícone */
+    border-radius: 50%; /* Borda arredondada para o fundo do ícone */
+    width: 50px; /* Largura do botão */
+    height: 50px; /* Altura do botão */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transições suaves */
+    text-decoration: none; /* Remove sublinhado do link */
+    font-size: 1.5rem; /* Tamanho da fonte do ícone */
+}
+
+.meal-box a:hover {
+    background-color: #e66b2e; /* Laranja mais escuro para o hover */
+    transform: scale(1.1); /* Leve aumento do tamanho ao passar o mouse */
+}
+
+/* Efeito de hover no card */
+.meal-box:hover {
+    transform: translateY(-5px); /* Leve elevação do card */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra mais pronunciada */
+}
+
+.meal-box:hover img {
+    opacity: 0.8; /* Torna a imagem um pouco mais escura ao passar o mouse */
+}
+
+/* Responsividade */
+@media (min-width: 768px) {
+    .container {
+        width: 90%;
+        margin: auto; /* Centraliza o container */
+    }
+}
+
+@media (max-width: 768px) {
+    .video-container {
+        width: 100%;
+        margin-bottom: 15px; /* Reduz o espaçamento abaixo do vídeo em telas menores */
+    }
+
+    .info {
+        width: 100%;
+        padding: 10px; /* Reduz o padding em telas menores */
+    }
+    
+    .ingredients ul {
+        flex-direction: column; /* Alinha a lista de ingredientes verticalmente em telas menores */
+    }
+}

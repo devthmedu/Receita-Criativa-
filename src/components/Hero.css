@@ -1,0 +1,101 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/remixicon/2.5.0/remixicon.min.css'); /* Fontes de ícones Remix */
+
+/* Estilo para o Hero Section */
+#hero {
+  position: relative;
+  height: 60vh; /* Aumentei a altura para uma exibição mais impactante */
+  background: url('../assets/img/legumes.png') center/cover no-repeat; /* Imagem de fundo ajustada */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Garante que nada ultrapasse os limites do container */
+}
+
+#hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* Sobreposição escura para contraste */
+  z-index: 1;
+}
+
+.hero-content {
+  text-align: center;
+  color: #fff;
+  z-index: 2; /* Garante que o conteúdo esteja acima da sobreposição */
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-family: 'Open Sans', sans-serif;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Adiciona sombra ao texto para maior legibilidade */
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 600px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave para o formulário */
+  padding: 10px;
+}
+
+.search-input {
+  border: 2px solid #ccc;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border-radius: 30px 0 0 30px;
+  outline: none;
+  flex: 1;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.search-input::placeholder {
+  color: #aaa;
+}
+
+.search-input:focus {
+  border-color: #f17e36;
+  background-color: #f9f9f9; /* Cor de fundo leve quando em foco */
+}
+
+.search-button {
+  border: none;
+  background-color: #f17e36;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 0 30px 30px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.search-button:hover {
+  background-color: #e66b2e;
+  transform: scale(1.05);
+}
+
+.search-button i {
+  font-size: 1.2rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}

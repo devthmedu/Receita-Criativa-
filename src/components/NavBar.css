@@ -1,0 +1,89 @@
+/* Importa as fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,500;0,600;0,700;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+/* Estilo geral para a barra de navegação */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f7efe4; /* Cor de fundo da barra de navegação */
+  color: #333; /* Cor do texto */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada */
+  border-bottom: 2px solid #e0d6c3; /* Borda inferior com cor um pouco mais clara */
+}
+
+/* Estilo para o logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  border-radius: 50%;
+  padding: 5px;
+  width: 50px; /* Ajuste o tamanho conforme necessário */
+  height: 50px; /* Ajuste o tamanho conforme necessário */
+}
+
+.logo-text {
+  font-family: "Pacifico", cursive;
+  font-size: 1.5rem;
+  color: #f53e28;
+  font-weight: 700;
+  margin: 0; /* Remove a margem padrão */
+}
+
+/* Estilo para a lista de navegação */
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+ul li {
+  margin: 0 15px; /* Espaçamento entre os itens */
+}
+
+ul li a {
+  color: #f53e28; /* Cor do texto dos links */
+  text-decoration: none; /* Remove sublinhado dos links */
+  font-size: 1.1rem; /* Tamanho da fonte ligeiramente maior */
+  font-weight: 600; /* Peso da fonte */
+  transition: color 0.3s ease, transform 0.3s ease; /* Transição suave para a cor e o efeito de transformação */
+}
+
+ul li a:hover {
+  color: #59ff80; /* Cor do texto ao passar o mouse */
+  transform: scale(1.1); /* Leve aumento do tamanho ao passar o mouse */
+}
+
+/* Adiciona um pouco de padding na tela pequena */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px; /* Reduz o padding em telas menores */
+  }
+
+  ul {
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+  }
+
+  ul li {
+    margin: 10px 0;
+  }
+
+  /* Estiliza os links em telas pequenas para que ocupem toda a largura */
+  ul li a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+}

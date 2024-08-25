@@ -1,0 +1,150 @@
+/* Estilos gerais para o Menu */
+#menu {
+  padding: 50px 20px;
+  border-radius: 15px; /* Bordas arredondadas no menu */
+  max-width: 1200px; /* Largura máxima para manter o conteúdo centrado */
+  margin: 0 auto; /* Centraliza o menu horizontalmente */
+}
+
+/* Estilos para o header do menu */
+.header {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  border-radius: 10px;
+  text-align: center; /* Centraliza o texto e os elementos internos */
+}
+
+.header h2 {
+  color: #8B4513;
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-family: 'Pacifico', cursive;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  margin: 0;
+  align-items: center;
+}
+
+/* Estilos para mensagens de carregamento e erro */
+.loading,
+.error {
+  text-align: center; /* Centraliza o texto */
+  font-size: 1.2rem; /* Tamanho da fonte ajustado */
+  color: #565656; /* Cor do texto */
+  margin-top: 2rem; /* Espaçamento acima das mensagens */
+  font-family: 'Open Sans', sans-serif; /* Fonte legível */
+}
+
+/* Estilos para mensagem quando não há categorias */
+.no-categories {
+  text-align: center; /* Centraliza o texto */
+  font-size: 1.2rem; /* Tamanho da fonte ajustado */
+  color: #777; /* Cor do texto */
+  margin-top: 2rem; /* Espaçamento acima da mensagem */
+  font-family: 'Open Sans', sans-serif; /* Fonte legível */
+}
+
+/* Estilos para o container de categorias */
+#categoryContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px; /* Espaço entre as caixas de categoria */
+  padding: 10px; /* Padding adicionado para espaçamento interno */
+}
+
+/* Estilos para cada caixa de alimento */
+.food-box {
+  cursor: pointer;
+  border: 1px solid #ddd; /* Borda cinza clara */
+  width: 350px; /* Largura padrão das caixas */
+  border-radius: 15px; /* Bordas arredondadas */
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Transições suaves */
+  background-color: #ffffff; /* Fundo branco */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  overflow: hidden; /* Garante que a imagem e o texto não ultrapassem as bordas */
+}
+
+/* Efeito de hover para a caixa de alimento */
+.food-box:hover {
+  transform: scale(1.05); /* Aumenta a caixa ao passar o mouse */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada */
+}
+
+/* Estilos para a imagem dentro da caixa de alimento */
+.food-box img {
+  width: 100%; /* Ocupa toda a largura da caixa */
+  height: 250px; /* Altura ajustada para um visual equilibrado */
+  object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
+  transition: transform 0.3s ease; /* Transição suave para o zoom da imagem */
+}
+
+/* Estilo do título da refeição */
+.food-box h3 {
+  padding: 15px 20px; /* Espaçamento interno */
+  font-size: 1.2rem; /* Tamanho da fonte ajustado */
+  font-family: 'Open Sans', sans-serif; /* Fonte mais legível */
+  font-weight: 700; /* Peso da fonte mais forte para destacar o texto */
+  color: #333; /* Cor do texto */
+  margin: 0; /* Remove a margem padrão */
+  border-top: 5px solid #f53e28; /* Linha superior para destaque */
+  background-color: #f9f9f9; /* Fundo leve para o título */
+}
+
+/* Estilo do texto sobre a caixa de alimento */
+.food-box p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro semi-transparente */
+  color: #fff; /* Texto branco */
+  font-size: 16px; /* Tamanho da fonte ajustado */
+  padding: 15px; /* Padding aumentado para melhor legibilidade */
+  margin: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, background-color 0.3s ease; /* Transições suaves para opacidade e cor de fundo */
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); /* Sombra no texto para destaque */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* Garante que o texto fique centralizado verticalmente */
+}
+
+/* Exibe o texto sobre a caixa de alimento ao passar o mouse */
+.food-box:hover p {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.8); /* Escurece o fundo ao passar o mouse */
+}
+
+/* Estilos responsivos para telas menores */
+@media (max-width: 768px) {
+  #categoryContainer {
+    gap: 15px; /* Reduz o espaço entre as caixas em telas menores */
+    padding: 10px; /* Padding ajustado em telas menores */
+  }
+
+  .food-box {
+    width: 100%; /* Largura total em telas pequenas */
+    max-width: 300px; /* Largura máxima ajustada */
+  }
+
+  .food-box img {
+    height: 200px; /* Altura ajustada para imagens em telas menores */
+  }
+
+  .food-box h3 {
+    font-size: 1.1rem; /* Tamanho da fonte reduzido */
+    padding: 10px; /* Padding ajustado */
+  }
+
+  .food-box p {
+    font-size: 14px; /* Tamanho da fonte reduzido */
+    padding: 10px; /* Padding ajustado */
+  }
+}

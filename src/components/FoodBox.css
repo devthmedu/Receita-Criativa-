@@ -1,0 +1,57 @@
+/* FoodBox.css */
+
+/* Estilo para o card FoodBox */
+.food-box {
+  position: relative; /* Necessário para posicionar o texto sobre a imagem */
+  background-color: #ffffff; /* Fundo branco para contraste e clareza */
+  border-radius: 15px; /* Bordas arredondadas mais modernas */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Sombra suave e moderna */
+  overflow: hidden; /* Garante que nada ultrapasse os limites do card */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease; /* Transições suaves para interatividade */
+  cursor: pointer; /* Cursor de ponteiro para indicar interatividade */
+  will-change: transform, box-shadow, filter; /* Otimiza o desempenho da transição */
+}
+
+/* Estilo da imagem do card */
+.food-box img {
+  width: 100%; /* Imagem ocupa toda a largura do card */
+  height: 200px; /* Altura ajustada para um visual equilibrado */
+  object-fit: cover; /* Cobre a área do card sem distorcer a imagem */
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Transição suave para o zoom e opacidade */
+}
+
+/* Texto sobre a imagem quando o card é hovered */
+.category-text {
+  position: absolute;
+  bottom: 15px; /* Espaçamento da parte inferior do card */
+  left: 50%;
+  transform: translateX(-50%); /* Centraliza o texto horizontalmente */
+  color: #ffffff; /* Cor do texto clara */
+  padding: 15px 20px; /* Padding maior para mais destaque */
+  border-radius: 8px; /* Bordas arredondadas no texto */
+  font-size: 1.2rem; /* Tamanho da fonte do texto ajustado para melhor legibilidade */
+  text-align: center;
+  opacity: 0; /* Inicialmente invisível */
+  transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.3s ease; /* Transição suave para a visibilidade, transformação e cor de fundo */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25); /* Sombra leve ao redor do texto */
+  backdrop-filter: blur(5px); /* Adiciona um desfoque ao fundo do texto para mais contraste */
+  width: calc(100% - 30px); /* Ajusta a largura do texto */
+}
+
+/* Estilo do card quando está sendo hovered */
+.food-box:hover {
+  transform: translateY(-10px) scale(1.03); /* Eleva e escala o card para criar um efeito de destaque */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada para um efeito de profundidade */
+  filter: brightness(1.1); /* Aumenta o brilho do card ao passar o mouse */
+}
+
+.food-box:hover img {
+  transform: scale(1.05); /* Zoom suave na imagem ao passar o mouse */
+  opacity: 0.85; /* Torna a imagem um pouco mais escura ao passar o mouse */
+}
+
+.food-box:hover .category-text {
+  opacity: 1; /* Torna o texto visível ao passar o mouse */
+  transform: translateY(0); /* Ajusta a posição do texto para mais destaque */
+  background-color: rgba(0, 0, 0, 0.8); /* Escurece o fundo para maior contraste com o texto */
+}

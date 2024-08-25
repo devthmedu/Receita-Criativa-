@@ -1,0 +1,82 @@
+/* MealBox.css */
+
+/* Estilo para o card MealBox */
+.meal-box {
+  position: relative;
+  background-color: #ffffff; /* Fundo branco para contraste */
+  border-radius: 15px; /* Bordas arredondadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  overflow: hidden; /* Garante que nada ultrapasse os limites do card */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transições suaves para interatividade */
+  cursor: pointer; /* Cursor de ponteiro para indicar interatividade */
+  text-align: center; /* Centraliza o texto dentro do card */
+  width: 100%; /* Faz o card ocupar a largura total do contêiner */
+  max-width: 350px; /* Largura máxima do card */
+  margin: 0 auto; /* Centraliza o card dentro do contêiner pai */
+}
+
+/* Estilo da imagem do card */
+.meal-img {
+  width: 100%; /* Imagem ocupa toda a largura do card */
+  height: 180px; /* Altura ajustada para um visual equilibrado */
+  object-fit: cover; /* Cobre a área do card sem distorcer a imagem */
+  transition: transform 0.3s ease; /* Transição suave para o zoom */
+}
+
+/* Efeito de hover para a imagem */
+.meal-box:hover .meal-img {
+  transform: scale(1.05); /* Aumenta a imagem ao passar o mouse */
+}
+
+/* Estilo do título da refeição */
+.meal-title {
+  padding: 15px; /* Espaçamento interno ajustado */
+  font-size: 1.2rem; /* Tamanho da fonte ajustado para melhor legibilidade */
+  font-family: 'Open Sans', sans-serif; /* Fonte mais legível */
+  font-weight: 600; /* Peso da fonte mais forte para destacar o texto */
+  color: #333; /* Cor do texto */
+  margin: 0; /* Remove a margem padrão */
+}
+
+/* Estilo do link para detalhes */
+.view-details {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f17e36; /* Cor de fundo do botão */
+  color: #ffffff; /* Cor do texto do botão */
+  width: 40px; /* Largura do botão */
+  height: 40px; /* Altura do botão */
+  border-radius: 50%; /* Botão redondo */
+  position: absolute;
+  bottom: 15px; /* Espaçamento da parte inferior */
+  right: 15px; /* Espaçamento da parte direita */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve no botão */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transições suaves para o botão */
+  text-decoration: none; /* Remove o sublinhado do link */
+  font-size: 1rem; /* Tamanho da fonte no botão */
+  line-height: 40px; /* Alinha verticalmente o texto */
+}
+
+/* Efeito de hover para o botão de detalhes */
+.view-details:hover {
+  background-color: #e66b2e; /* Cor de fundo do botão ao passar o mouse */
+  transform: scale(1.1); /* Efeito de aumento suave */
+}
+
+/* Estilos responsivos para telas menores */
+@media (max-width: 768px) {
+  .meal-box {
+    max-width: 100%; /* Largura total em telas pequenas */
+  }
+
+  .meal-title {
+    font-size: 1rem; /* Tamanho da fonte reduzido */
+  }
+
+  .view-details {
+    width: 35px; /* Largura do botão reduzida */
+    height: 35px; /* Altura do botão reduzida */
+    font-size: 0.9rem; /* Tamanho da fonte reduzido no botão */
+  }
+}
