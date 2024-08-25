@@ -2,12 +2,18 @@
 @import 'slick-carousel/slick/slick.css';
 @import 'slick-carousel/slick/slick-theme.css';
 
-/* Estilo para a seção do slider */
-.slider-section {
+/* Estilo para a seção externa do slider */
+.slider-wrapper {
+  position: relative;
   max-width: 900px;
   margin: 0 auto;
   padding: 20px;
+}
+
+/* Estilo para a seção do slider */
+.slider-section {
   position: relative;
+  padding: 20px;
   border-radius: 10px;
   text-align: center; /* Centraliza o texto e os elementos internos */
 }
@@ -19,7 +25,7 @@
     font-weight: 700;
     font-family: 'Pacifico', cursive;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-    margin-bottom:4rem;
+    margin-bottom: 4rem;
     margin-top: 3rem;
 }
 
@@ -35,7 +41,6 @@
   align-items: center; /* Centraliza verticalmente o conteúdo */
   position: relative; /* Necessário para a legenda posicionada absolutamente */
   width: 100%; /* Garante que o item do slider ocupe toda a largura disponível */
-  
 }
 
 /* Imagem dentro do slider */
@@ -47,7 +52,6 @@
   margin: 0 auto; /* Garante que a imagem esteja centralizada no contêiner */
   margin-bottom: 7rem;
 }
-
 
 /* Legenda do slider */
 .slider-caption {
@@ -64,29 +68,25 @@
   margin: 0 auto; /* Centraliza a legenda horizontalmente */
 }
 
-
-/* Estilo para os pontos de navegação */
-.dots-container {
-  position: absolute;
-  bottom: 10px; /* Ajuste a posição conforme necessário */
-  width: 100%; /* Ajusta a largura dos pontos */
-  display: flex;
-  justify-content: center;
-}
-
+/* Estilo para a lista de pontos */
 .dots-list {
-  margin: 0;
   padding: 0;
   list-style: none;
   display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 10px; /* Adiciona espaço entre os pontos */
+  margin: 0; /* Remove a margem superior para alinhar melhor com a posição dos pontos */
+  position: absolute; /* Garante que a lista de pontos seja posicionada corretamente dentro do contêiner pai */
+  bottom: 1rem; /* Ajusta a distância do fundo do contêiner pai */
+  left: 50%; /* Centraliza a lista horizontalmente */
+  transform: translateX(-50%); /* Compensa a centralização para garantir que esteja bem posicionado */
 }
 
-.custom-dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: #f53e28;
-  cursor: pointer;
+/* Estilo para o contêiner dos pontos de navegação */
+.dots-container {
+  position: relative; /* Garante que o posicionamento absoluto da lista de pontos funcione */
+  width: 100%; /* Ajusta a largura do contêiner dos pontos de navegação */
 }
 
 /* Responsividade */

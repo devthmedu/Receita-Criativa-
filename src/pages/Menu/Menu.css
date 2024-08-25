@@ -1,9 +1,13 @@
+
+
+
 /* Estilos gerais para o Menu */
 #menu {
   padding: 50px 20px;
   border-radius: 15px; /* Bordas arredondadas no menu */
   max-width: 1200px; /* Largura máxima para manter o conteúdo centrado */
   margin: 0 auto; /* Centraliza o menu horizontalmente */
+  
 }
 
 /* Estilos para o header do menu */
@@ -34,6 +38,7 @@
   color: #565656; /* Cor do texto */
   margin-top: 2rem; /* Espaçamento acima das mensagens */
   font-family: 'Open Sans', sans-serif; /* Fonte legível */
+  
 }
 
 /* Estilos para mensagem quando não há categorias */
@@ -68,6 +73,7 @@
   background-color: #ffffff; /* Fundo branco */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra leve */
   overflow: hidden; /* Garante que a imagem e o texto não ultrapassem as bordas */
+  
 }
 
 /* Efeito de hover para a caixa de alimento */

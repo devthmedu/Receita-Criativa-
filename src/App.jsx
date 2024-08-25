@@ -10,7 +10,7 @@ import Category from './pages/Category/Category';
 import Meal from './pages/SingleMeal/Meal';
 
 // Componentes de layout
-import Navbar from './components/Navbar';
+import NavBar from './components/NavBar'; // Certifique-se de que o nome está correto
 import Footer from './components/Footer';
 
 // React Router
@@ -19,7 +19,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 const App = () => {
   return (
     <Router>
-      <Navbar />
+      <NavBar />
       <main>
         <Routes>
           <Route path='/' element={<Home />} />

@@ -1,12 +1,30 @@
 /* Estilo geral para a página de refeição */
+/* Estilos para a seção de detalhes da refeição */
 #single-meal {
-    min-height: 100vh; /* Garante altura mínima para preencher a tela */
-    padding: 20px; /* Espaçamento interno */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centraliza o conteúdo horizontalmente */
-    font-family: 'Open Sans', sans-serif; /* Fonte padrão */
+  min-height: 100vh; /* Garante altura mínima para preencher a tela */
+  padding: 20px; /* Espaçamento interno */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza o conteúdo horizontalmente */
+  font-family: 'Open Sans', sans-serif; /* Fonte padrão */
+  position: relative; /* Necessário para o posicionamento absoluto da imagem de fundo */
 }
+
+/* Estilos para a imagem fixa no canto direito */
+#single-meal::before {
+  content: "";
+  position: fixed; /* Fixar a imagem em relação à janela de visualização */
+  top: 0; /* Posiciona a imagem no topo */
+  right: 0; /* Posiciona a imagem ao lado direito */
+  width: 400px; /* Largura fixa para a imagem */
+  height: 100vh; /* Altura igual à altura da janela de visualização */
+  background-image: url('/src/assets/img/backgrund.png'); /* Caminho para a imagem de fundo */
+  background-size: cover; /* Ajusta o tamanho da imagem para cobrir o elemento */
+  background-position: center; /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Evita repetição da imagem */
+  z-index: -1; /* Coloca a imagem atrás do conteúdo */
+}
+
 
 .video-container {
     width: 180%; /* Largura total do contêiner de vídeo */
