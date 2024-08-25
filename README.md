@@ -119,15 +119,6 @@ Para fazer o deploy do seu projeto, você pode usar a [Vercel](https://vercel.co
 
 Para um deploy contínuo, você pode conectar seu repositório GitHub, GitLab ou Bitbucket à Vercel. Assim, cada vez que você fizer um push para o seu repositório, o Vercel fará o deploy automaticamente.
 
-## 📸 Capturas de Tela
-
-Aqui estão algumas capturas de tela do aplicativo:
-
-- **Página Inicial**
-  ![Página Inicial](./assets/screenshots/home.png)
-
-- **Detalhes da Refeição**
-  ![Detalhes da Refeição](./assets/screenshots/meal-details.png)
 
 ## 🤝 Contribuindo
 
